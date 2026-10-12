@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4f4">
+  <title>Campus Piano Catalog</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Ask the piano catalog</h1>
+
+    <form class="question-card" id="query-form">
+      <label class="sr-only" for="question">Your question</label>
+      <textarea id="question" maxlength="500" rows="3" placeholder="Which pianos are overdue for tuning?" required></textarea>
+      <div class="form-bottom">
+        <button class="ask-button" id="ask-button" type="submit">Ask <span aria-hidden="true">↗</span></button>
+      </div>
+    </form>
+
+    <section class="answer-card" aria-live="polite" aria-label="Answer">
+      <div class="answer-heading"><strong id="answer-label">Answer</strong><span class="result-count" id="result-count"></span></div>
+      <div class="empty-state" id="empty-state">Your answer will appear here.</div>
+      <div class="loading-state hidden" id="loading-state"><span class="loader"></span>Querying the catalog…</div>
+      <div class="answer-area hidden" id="answer-area">
+        <p class="answer-text" id="answer-text"></p>
+        <div class="table-wrap" id="table-wrap"></div>
+      </div>
+      <p class="error-state hidden" id="error-state"></p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
