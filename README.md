@@ -11,7 +11,7 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Add `OPENAI_API_KEY` to `.env`. Set `OPENAI_MODEL=gpt-6-luna` there to use GPT-6 Luna. Without a key, the example questions work in demo mode.
+Add `OPENAI_API_KEY` to `.env`. Set `OPENAI_MODEL=gpt-6-luna` there to use GPT-6 Luna.
 
 ```bash
 python app.py
